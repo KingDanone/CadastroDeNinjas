@@ -23,8 +23,6 @@ public class NinjaModel {
 
     private String nome;
 
-    @NotBlank
-    @Email(message = "Email invalido!")
     private String email;
 
     private int idade;
