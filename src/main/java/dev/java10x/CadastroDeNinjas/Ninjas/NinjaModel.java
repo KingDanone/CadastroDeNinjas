@@ -1,6 +1,7 @@
 package dev.java10x.CadastroDeNinjas.Ninjas;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import dev.java10x.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -19,7 +20,7 @@ public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long  id;
+    private Long id;
 
     private String nome;
 
@@ -31,6 +32,7 @@ public class NinjaModel {
     //Many->Muitos classNinjas | to->para | One->uma classMisoes
     @ManyToOne
     @JoinColumn(name = "missoes_id") //Foreing Key ou chave estrangeira
+    @JsonBackReference
     private MissoesModel missoes;
 
 }

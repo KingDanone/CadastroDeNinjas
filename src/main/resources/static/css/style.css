@@ -1,0 +1,26 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    margin-bottom: 2rem !important;
+}
+
+.table thead.table-dark th {
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-warning, .btn-danger, .btn-success, .btn-secondary {
+    transition: background-color 0.3s ease;
+}

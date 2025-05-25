@@ -1,6 +1,7 @@
 package dev.java10x.CadastroDeNinjas.Ninjas;
 
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -19,16 +20,20 @@ public class NinjaController {
     }
 
     @PostMapping("/criarninja")
-    public NinjaModel createNinja(@RequestBody NinjaModel ninja) {return ninjaService.save(ninja);}
+    public NinjaModel createNinja(@RequestBody NinjaModel ninja) {
+        return ninjaService.save(ninja);
+    }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable Long id){ninjaService.delete(id);}
+    public void delete(@PathVariable Long id) {
+        ninjaService.delete(id);
+    }
 
     @PutMapping("{id}")
     public NinjaModel atualizarNinja(
             @PathVariable Long id,
             @RequestBody NinjaModel ninjaAtualizado
-    ){
+    ) {
         return ninjaService.atualizar(id, ninjaAtualizado);
     }
 }
